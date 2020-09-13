@@ -26,7 +26,10 @@ class polinomio(object):
             
         Return: String con la resta de los polinomios
         """
-        pass
+        Poly1 = sympy.Poly(self.polynomics)
+        Poly2 = sympy.Poly(polinomio.lower())
+
+        return Poly1 - Poly2
 
     def multiplicarPolinomios(self,polinomio):
         """
@@ -35,7 +38,10 @@ class polinomio(object):
             
         Return: String con la multiplicacion de los polinomios
         """
-        pass
+        Poly1 = sympy.Poly(self.polynomics)
+        Poly2 = sympy.Poly(polinomio.lower())
+
+        return Poly1 * Poly2
 
     def multEscalar(self,escalar):
         """
@@ -64,4 +70,5 @@ if __name__ == "__main__":
     print("Suma de polinomios: ", polinomio.sumaPolinomios(polinomio2))
     print("Resta de polinomios: ", polinomio.restaPolinomios(polinomio2))
     print("multiplicacion de polinomios: ", polinomio.multiplicarPolinomios(polinomio2))
-    print("multiplicacion por un escalar: ", polinomio.multiplicarPolinomios(polinomio2))
+    print("Evaluando el polinomio: ", polinomio.evaluarPolinomio(2))
+    print("Evaluacion de polinomios: ", polinomio.multEscalar(2))
