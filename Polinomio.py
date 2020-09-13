@@ -50,7 +50,8 @@ class polinomio(object):
             
         Return: String el polinomio original multiplicado por el escalar
         """
-        pass
+        Poly1 = sympy.Poly(self.polynomics)
+        return escalar * Poly1
 
     def evaluarPolinomio(self,numero):
         """
@@ -67,8 +68,9 @@ class polinomio(object):
 if __name__ == "__main__":
     polinomio = polinomio("X**3 + x**2 + x + 3")
     polinomio2 = "x**2"
+
     print("Suma de polinomios: ", polinomio.sumaPolinomios(polinomio2))
     print("Resta de polinomios: ", polinomio.restaPolinomios(polinomio2))
     print("multiplicacion de polinomios: ", polinomio.multiplicarPolinomios(polinomio2))
     print("Evaluando el polinomio: ", polinomio.evaluarPolinomio(2))
-    print("Evaluacion de polinomios: ", polinomio.multEscalar(2))
+    print("Multiplicando por un escalar: ", polinomio.multEscalar(2))
